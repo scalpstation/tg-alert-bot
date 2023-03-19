@@ -1,4 +1,4 @@
-# ScalpStation Telegram alert bot
+# Telegram to ScalpStation alert bot
 
 This bot resends signals from Telegram messages to ScalpStation.com API
 
