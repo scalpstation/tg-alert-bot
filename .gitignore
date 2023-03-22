@@ -10,3 +10,4 @@ name.session-journal
 whitelist.txt
 *_local.py
 local_*.py
+start.smd
