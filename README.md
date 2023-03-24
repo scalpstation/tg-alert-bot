@@ -15,9 +15,9 @@ pipenv sync
 
 1. Set environment variables  
 ```bash
-TG_API_ID
-TG_API_HASH
-API_KEY
+TG_API_ID=121345  # https://core.telegram.org/api/obtaining_api_id
+TG_API_HASH=121345  # https://core.telegram.org/api/obtaining_api_id
+API_KEY=121345  # https://scalpstation.com/settings/alerts
 ```
 2. Run
 ```bash
@@ -26,3 +26,7 @@ python main.py
 ```
 3. Enter phone number and login code
 4. Enjoy
+
+## Run on Windows
+
+https://www.youtube.com/watch?v=nfDWL8Mg2Q4
