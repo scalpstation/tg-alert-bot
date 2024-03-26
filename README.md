@@ -5,7 +5,7 @@ This bot resends signals from Telegram messages to ScalpStation.com API
 ## Installation
 
 1. Clone this repository
-2. Install python 3.10+ and pipenv
+2. Install python 3.11+ and pipenv
 3. Type
 ```bash
 pipenv sync
