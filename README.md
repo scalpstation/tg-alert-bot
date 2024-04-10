@@ -13,11 +13,14 @@ pipenv sync
 
 ## Start
 
-1. Set environment variables  
+1. Copy file config.sample.ini to config.ini and fill it with your data
 ```bash
-TG_API_ID=121345  # https://core.telegram.org/api/obtaining_api_id
-TG_API_HASH=121345  # https://core.telegram.org/api/obtaining_api_id
-API_KEY=121345  # https://scalpstation.com/settings/alerts
+[telegram]
+api_id = 123456  # https://core.telegram.org/api/obtaining_api_id
+api_hash = 123456  # https://core.telegram.org/api/obtaining_api_id
+[sender]
+api_key = 123456  # https://scalpstation.com/settings/alerts
+[receiver]
 ```
 2. Run
 ```bash
