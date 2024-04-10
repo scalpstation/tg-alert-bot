@@ -1,4 +1,3 @@
-import os
 from typing import Callable, Awaitable
 
 import aiofiles as aiofiles
@@ -8,23 +7,16 @@ from telethon.tl.types import Message as TgMessage
 from parser.base.structs import Message, Chat
 from receiver.base.base_receiver import BaseReceiver
 
-tg_api_id = os.environ.get('TG_API_ID', '')
-tg_api_hash = os.environ.get('TG_API_HASH', '')
-
 
 class TelegramReceiver(BaseReceiver):
     chat_cache = {}
     whitelist: set | None = None
 
-    def __init__(self):
-        self.api_id = tg_api_id
-        self.api_hash = tg_api_hash
+    def __init__(self, config: dict):
+        self.api_id = config['api_id']
+        self.api_hash = config['api_hash']
         self.chat_cache = {}
         self.whitelist = None
-
-        if not self.api_id or not self.api_hash:
-            print('set variables TG_API_ID and TG_API_HASH')
-            raise SystemExit(1)
 
     def set_whitelist(self, text):
         rows = text.splitlines() if text else ''

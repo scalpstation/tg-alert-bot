@@ -6,7 +6,7 @@ from symbols.default_symbols import DefaultSymbols
 
 class StationParser(DefaultParser):
 
-    def __init__(self):
+    def __init__(self, config: dict):
         super().__init__()
         self.symbols = DefaultSymbols()
 
