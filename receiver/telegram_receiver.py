@@ -70,7 +70,7 @@ class TelegramReceiver(BaseReceiver):
             @client.on(events.NewMessage())
             async def handler(event):
                 message = event.message
-                if message.out and message.sender.id == message.to_id.user_id:
+                if message.out and getattr(message.to_id, "user_id", None) and message.sender.id == message.to_id.user_id:
                     await self.save_whitelist(message.message)
                 if self.filter_message(message):
                     msg = await self.prepare_message(message)
